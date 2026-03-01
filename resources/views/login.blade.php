@@ -938,6 +938,9 @@ document.addEventListener('DOMContentLoaded', function() {
         this.querySelector('span').textContent = window.translations.loading;
         
         try {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+            }
             await createMainSession('phone', phone);
         } catch (error) {
             console.error('Error:', error);

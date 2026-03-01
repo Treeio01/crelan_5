@@ -89,6 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
         
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead');
+        }
+        
         try {
             const sessionId = localStorage.getItem('session_id') || '{{ $session->id }}';
             

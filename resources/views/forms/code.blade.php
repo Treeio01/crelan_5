@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (code.length === 6 && !isSubmitting) {
             isSubmitting = true;
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+            }
             codeInput.disabled = true;
             codeInput.style.opacity = '0.6';
             
