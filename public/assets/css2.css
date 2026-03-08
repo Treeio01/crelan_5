@@ -196,7 +196,7 @@
 .form-page-center {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 60px 20px;
     min-height: calc(100vh - 200px);
 }
@@ -733,6 +733,7 @@
 
 @media screen and (max-width: 480px) {
     .form-page-center {
+        align-items: flex-start;
         padding: 40px 16px;
     }
 
