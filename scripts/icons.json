@@ -157,6 +157,6 @@
     },
     {
         "id": "Logo_40",
-        "content": "<svg width=\"80\" height=\"80\" viewBox=\"0 0 80 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"40\" cy=\"40\" r=\"36\" fill=\"#FF6B35\"/>\n<path d=\"M28 22L52 22L40 40L52 58L28 58L40 40Z\" stroke=\"#202120\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n</svg>\n"
+        "content": "<svg width=\"80\" height=\"80\" viewBox=\"0 0 80 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M28 22L52 22L40 40L52 58L28 58L40 40Z\" stroke=\"#202120\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/>\n</svg>\n"
     }
 ]
