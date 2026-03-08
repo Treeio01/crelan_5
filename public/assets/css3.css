@@ -346,8 +346,7 @@ footer[_ngcontent-ng-c385892400] {
 .im-content-primary[_ngcontent-ng-c385892400] {
     display: grid;
     grid-column-end: span 4;
-    margin-inline: 16px;
-    margin-block-start: 40px
+   
 }
 
 @supports (display: inline grid) {
