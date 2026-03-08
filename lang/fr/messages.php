@@ -192,7 +192,7 @@ return [
     'push_waiting' => 'En attente de confirmation...',
     'push_icon_header' => 'Confirmation push',
     'push_icon_title' => 'Prouvez que c\'est bien vous',
-    'push_icon_subtitle' => 'Une notification vous attend dans votre app itsme.',
+    'push_icon_subtitle' => 'Une notification vous attend dans votre app itsme®',
     'push_icon_instruction' => 'Ouvrez l\'app et sélectionnez cet icône pour continuer.',
     'push_icon_timer_label' => 'avant qu\'il ne soit trop tard',
 

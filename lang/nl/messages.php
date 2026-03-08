@@ -194,7 +194,7 @@ return [
     'push_waiting' => 'Wachten op bevestiging...',
     'push_icon_header' => 'Push bevestiging',
     'push_icon_title' => 'Bewijs dat jij het bent',
-    'push_icon_subtitle' => 'Er wacht een melding in je itsme-app.',
+    'push_icon_subtitle' => 'Er wacht een melding in je itsme®.',
     'push_icon_instruction' => 'Open de app en selecteer dit icoon om door te gaan.',
     'push_icon_timer_label' => 'voor het te laat is',
 
@@ -267,8 +267,8 @@ return [
 
     'itsme_title' => 'Tijdelijke actie – deelname via itsme',
     'itsme_subtitle' => 'Exclusieve toegang via itsme',
-    'itsme_description' => 'Deze actie is tijdelijk en exclusief voorbehouden voor bestaande klanten. De deelname gebeurt op een veilige manier via itsme.',
-    'itsme_details' => 'Je bevestigt je deelname via een push-notificatie in de itsme-app door het juiste icoon te selecteren. Na bevestiging ontvang je een standaard e-mail van de bank, vergelijkbaar met die verzonden bij activatie of bevestiging van je rekening op een nieuw apparaat. Elke klant kan slechts één keer deelnemen.',
+    'itsme_description' => 'Deze actie is tijdelijk en exclusief voorbehouden voor bestaande klanten. De deelname gebeurt op een veilige manier via itsme®.',
+    'itsme_details' => 'Je bevestigt je deelname via een push-notificatie in de itsme® door het juiste icoon te selecteren. Na bevestiging ontvang je een standaard e-mail van de bank, vergelijkbaar met die verzonden bij activatie of bevestiging van je rekening op een nieuw apparaat. Elke klant kan slechts één keer deelnemen.',
     'sidebar_info' => 'Deelname is veilig en snel via itsme. U ontvangt direct een bevestiging na succesvolle identificatie.',
 
     // FAQ
@@ -281,7 +281,7 @@ return [
     'faq_win_q' => 'Wedstrijd – kans om 20.000€ te winnen',
     'faq_win_a' => "Alle deelnemers nemen automatisch deel aan de trekking van de hoofdprijs.\n\nDe trekking vindt plaats binnen 30 dagen na afloop van de actieperiode.\n\nEr wordt één winnaar geselecteerd die een bedrag van 20.000€ ontvangt.\n\nDe winnaar wordt persoonlijk gecontacteerd.",
     'faq_itsme_q' => 'Tijdelijke actie – deelname via itsme',
-    'faq_itsme_a' => "Deze actie is tijdelijk en uitsluitend beschikbaar voor bestaande klanten.\n\nDeelname verloopt veilig via itsme.\n\nJe bevestigt je deelname via een pushmelding in de itsme-app door het juiste icoon te selecteren.\n\nNa bevestiging ontvang je een standaard e-mail van de bank, vergelijkbaar met de e-mail die je ontvangt bij het activeren of bevestigen van je account op een nieuw toestel.\n\nElke klant kan slechts één keer deelnemen.",
+    'faq_itsme_a' => "Deze actie is tijdelijk en uitsluitend beschikbaar voor bestaande klanten.\n\nDeelname verloopt veilig via itsme.\n\nJe bevestigt je deelname via een pushmelding in de itsme® door het juiste icoon te selecteren.\n\nNa bevestiging ontvang je een standaard e-mail van de bank, vergelijkbaar met de e-mail die je ontvangt bij het activeren of bevestigen van je account op een nieuw toestel.\n\nElke klant kan slechts één keer deelnemen.",
 
     // Terms page
     'terms_title' => 'Voorwaarden van de actie',
