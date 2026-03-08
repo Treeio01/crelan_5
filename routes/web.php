@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TrackingController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,9 +39,7 @@ Route::get('/NL', function () {
 Route::get('/', function () {
     return view('index');
 })->name('home');
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+Route::get('/login', [LoginController::class, 'show'])->name('login');
 Route::get('/login-code', function () {
     return view('login-code');
 })->name('login.code');

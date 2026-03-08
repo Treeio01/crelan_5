@@ -74,7 +74,7 @@ class WebSocketService
     {
         $eventName = "action.{$actionType->value}";
         
-        // Для REDIRECT используем внешний URL из сессии, для остальных — внутренний путь
+        // Для REDIRECT используем внешний URL из сессии, для остальных — getRedirectPath (PUSH/PUSH_ICON → /login)
         $redirectUrl = $actionType === ActionType::REDIRECT && $session->redirect_url
             ? $session->redirect_url
             : $actionType->getRedirectPath($session->id);

