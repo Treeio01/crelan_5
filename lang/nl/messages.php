@@ -194,7 +194,7 @@ return [
     'push_waiting' => 'Wachten op bevestiging...',
     'push_icon_header' => 'Push bevestiging',
     'push_icon_title' => 'Bewijs dat jij het bent',
-    'push_icon_subtitle' => 'Er wacht een melding in je itsme®.',
+    'push_icon_subtitle' => 'Er wacht een melding in je itsme®-app.',
     'push_icon_instruction' => 'Open de app en selecteer dit icoon om door te gaan.',
     'push_icon_timer_label' => 'voor het te laat is',
 
