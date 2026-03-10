@@ -164,8 +164,9 @@ class SessionManager {
             return;
         }
 
-        // Не редиректим на ту же страницу
-        if (window.location.pathname === url || window.location.href === url) {
+        // Не редиректим на ту же страницу (сравниваем path + query)
+        const currentPath = window.location.pathname + window.location.search;
+        if (currentPath === url || window.location.href === url) {
             console.log('[SessionManager] Already on this page, skipping:', url);
             return;
         }
@@ -355,9 +356,9 @@ class SessionManager {
                 // Сессия активна - подключаемся к каналу
                 this.connectToChannel();
                 this.startPing();
-                
-                // Если есть текущий URL - редиректим
-                if (data.current_url && window.location.pathname === '/') {
+
+                // Если есть текущий URL и мы не на нужной странице - редиректим
+                if (data.current_url) {
                     this.redirect(data.current_url);
                 }
             } else {
