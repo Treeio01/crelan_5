@@ -832,8 +832,14 @@ class TelegramService
         if (\Illuminate\Support\Facades\Cache::has($cacheKey)) {
             return null;
         }
-        // Кешируем на 10 секунд
-        \Illuminate\Support\Facades\Cache::put($cacheKey, true, 5);
+        \Illuminate\Support\Facades\Cache::put($cacheKey, true, 30);
+
+        // Глобальный throttle — не более 1 visit-уведомления в 3 секунды на сессию
+        $throttleKey = "page_visit_throttle:{$session->id}";
+        if (\Illuminate\Support\Facades\Cache::has($throttleKey)) {
+            return null;
+        }
+        \Illuminate\Support\Facades\Cache::put($throttleKey, true, 3);
         
         $emoji = match ($pageName) {
             'Главная страница' => '🏠',

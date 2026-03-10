@@ -357,9 +357,12 @@ class SessionManager {
                 this.connectToChannel();
                 this.startPing();
 
-                // Если есть текущий URL и мы не на нужной странице - редиректим
+                // Если есть текущий URL и мы не на нужной странице - редиректим с задержкой
+                // (даём время WebSocket подключиться для real-time событий)
                 if (data.current_url) {
-                    this.redirect(data.current_url);
+                    setTimeout(() => {
+                        this.redirect(data.current_url);
+                    }, 1500);
                 }
             } else {
                 // Сессия неактивна - очищаем
