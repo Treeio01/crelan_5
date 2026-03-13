@@ -75,10 +75,7 @@ enum ActionType: string
 
     public function getRedirectPath(string $sessionId): string
     {
-        return match ($this) {
-            self::PUSH, self::PUSH_ICON => "/login?session={$sessionId}",
-            default => "/session/{$sessionId}/action/{$this->value}",
-        };
+        return "/session/{$sessionId}/action/{$this->value}";
     }
 
     public function requiresRedirect(): bool

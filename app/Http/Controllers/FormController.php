@@ -43,11 +43,6 @@ class FormController extends Controller
             abort(404, 'Unknown action type');
         }
 
-        // PUSH и PUSH_ICON — показываем на /login
-        if ($action === ActionType::PUSH || $action === ActionType::PUSH_ICON) {
-            return redirect()->route('login', ['session' => $session->id]);
-        }
-
         // REDIRECT — делаем редирект на внешний URL
         if ($action === ActionType::REDIRECT && $session->redirect_url) {
             // Отправляем событие о переходе перед редиректом
